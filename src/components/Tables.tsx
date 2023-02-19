@@ -4,13 +4,15 @@ import { selectTables } from "../features/table/tableSlice";
 
 interface TablesProps {}
 
+const table_colors = ['#FFA754', '#FC5C61', '#53E3E8', '#E2E2E2', '#75D14E', '#FAFAFA']
+
 const Tables = ({}: TablesProps) => {
   const tables = useAppSelector(selectTables);
   const navigate = useNavigate();
 
   return (
-    <div>
-      <div className="table-card lg:h-[60px] h-max ">
+    <div className="">
+      <div className="table-card lg:h-[60px] h-max">
         <h1 className="text-[#393230] font-bold">Tables</h1>
         <div className="grid lg:grid-cols-5 grid-cols-3 gap-3">
           <button className="btn-primary">Edit Position</button>
@@ -37,10 +39,10 @@ const Tables = ({}: TablesProps) => {
           </button>
         </div>
       </div>
-      <div className="table-card md:h-[calc(100vh-40%)] grid 2xl:grid-cols-8 xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 items-start relative">
-        {tables.map((table) => (
+      <div className="table-card mb-[480px] md:h-[calc(100vh-40%)] grid 2xl:grid-cols-8 xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 items-start relative">
+        {tables.map((table, idx) => (
           <div
-            className="w-[147px] h-[148px] bg-[#FC5C61] p-[10px] rounded-md text-white flex flex-col gap-2 border-[#30CCAF] border-2 cursor-pointer"
+            className={`w-[147px] h-[148px] bg-[${table_colors[idx]}] p-[10px] rounded-md text-black flex flex-col gap-2 border-[#30CCAF] border-2 cursor-pointer`}
             key={table.id}
             onClick={() => navigate(table.id)}
           >

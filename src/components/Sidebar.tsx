@@ -23,7 +23,7 @@ const Sidebar = ({}: SidebarProps) => {
   }, []);
 
   return (
-    <div className="w-[180px] min-h-full mt-5 bg-white rounded-[10px] hidden sm:block">
+    <div className="w-[180px] mt-5 bg-white rounded-[10px] hidden sm:block">
       <div className="flex flex-col items-start pt-5 pl-[22px]">
         {Links.map((link) => (
           <Disclosure key={link.id}>

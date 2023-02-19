@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Tables from "./components/Tables";
@@ -15,13 +16,16 @@ function App() {
         <Navbar />
         <div className="grid sm:grid-cols-[200px_minmax(180px,auto)] md:h-[calc(100vh-6.8rem)]">
           <Sidebar />
-          <Routes>
-            <Route path="/" element={<HomeView />} />
-            <Route path="/tables" element={<TablesView />}>
-              <Route index element={<Tables />} />
-              <Route path=":id" element={<TableSelected />} />
-            </Route>
-          </Routes>
+          <div className="grid">
+            <Routes>
+              <Route path="/" element={<HomeView />} />
+              <Route path="/tables" element={<TablesView />}>
+                <Route index element={<Tables />} />
+                <Route path=":id" element={<TableSelected />} />
+              </Route>
+            </Routes>
+            <Footer />
+          </div>
         </div>
       </div>
     </BrowserRouter>
