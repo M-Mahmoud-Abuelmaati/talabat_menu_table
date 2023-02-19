@@ -1,0 +1,6 @@
+export const Token =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhbG11d2FsbGFkQGdtYWlsLmNvbSIsInVzZXJJZCI6IjYzZDMyNWU4MDcwYzY4ODNmOGQzYjgwYyIsInN1cHBsaWVySWQiOiI2M2QzMjVlNzA3MGM2ODgzZjhkM2I4MDgiLCJyb2xlSWQiOiI2M2QyYzc5NWI2MmI5YzM2MzBkNGNmZTkiLCJpYXQiOjE2NzU1MTI4OTl9.0GCewzQdRFGl05dVVLQfrnxQQicyq6culVQ1BGzgzZQ";
+
+export const API = {
+  main: "https://apimenudev.talabatmenu.com",
+};

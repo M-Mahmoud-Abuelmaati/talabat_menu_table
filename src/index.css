@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@layer components {
+  
+  .table-card {
+    @apply flex sm:justify-between gap-4 sm:gap-3 md:gap-3 items-center w-[100%] bg-white box-border mt-[20px] rounded-[10px] py-[10px] px-5
+  }
+
+  .btn-primary {
+    @apply rounded-[5px] bg-[#D9D9D9] sm:py-1.5 sm:px-3 text-[#393230] font-semibold active:bg-[#D9D9D9]/50 transition-all text-[10px] md:text-sm
+  }
+
+  .btn-secondary {
+    @apply rounded-[5px] bg-secondary sm:py-1.5 sm:px-4 text-[#FFFFFF] font-semibold active:bg-secondary/50 transition-all text-[10px] md:text-sm
+  }
+
+  .btn-muted {
+    @apply rounded-[5px] bg-[#F5F5F5] sm:py-1.5 sm:px-3 text-[#ABA5A2] font-semibold  text-[10px] md:text-sm
+  }
+  
+  .btn-outlined {
+    @apply rounded-[5px] sm:py-1.5 sm:px-2 font-semibold active:bg-[#D9D9D9]/50 transition-all text-[10px] md:text-sm
+  }
+}
